@@ -24,5 +24,5 @@ end
 require('nvim-tree').setup {
   on_attach = my_on_attach,
   filters = { custom = { '^.git$' } },
-  view = { side = 'right' },
+  view = { side = 'right', adaptive_size = true },
 }
