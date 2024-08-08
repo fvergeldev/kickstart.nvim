@@ -1,0 +1,66 @@
+{
+  "name": "custom-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "tex",
+          "html",
+          "global",
+          "all"
+        ],
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": [
+          "markdown",
+          "rmd"
+        ],
+        "path": "./snippets/markdown.json"
+      },
+      {
+        "language": [
+          "html",
+          "jade",
+          "pug",
+          "eruby",
+          "javascriptreact",
+          "htmldjango",
+          "astro",
+          "blade"
+        ],
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "vue",
+          "svelte"
+        ],
+        "path": "./snippets/javascript/javascript.json"
+      },
+      {
+        "language": [
+          "typescript",
+          "typescriptreact"
+        ],
+        "path": "./snippets/javascript/typescript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/javascript/react-ts.json"
+      },
+      {
+        "language": [
+          "javascriptreact",
+          "typescriptreact"
+        ],
+        "path": "./snippets/javascript/react-es7.json"
+      }
+    ]
+  }
+}
