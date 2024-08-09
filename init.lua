@@ -799,6 +799,20 @@ require('lazy').setup({
     },
   },
   { 'akinsho/toggleterm.nvim', version = '*', config = true },
+  {
+    'OXY2DEV/markview.nvim',
+    lazy = false, -- Recommended
+    -- ft = "markdown" -- If you decide to lazy-load anyway
+
+    dependencies = {
+      -- You will not need this if you installed the
+      -- parsers manually
+      -- Or if the parsers are in your $RUNTIMEPATH
+      'nvim-treesitter/nvim-treesitter',
+
+      'nvim-tree/nvim-web-devicons',
+    },
+  },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -838,6 +852,9 @@ require 'nvim-tree-setup'
 
 -- Better terminals
 require 'toggleterm-setup'
+
+-- Custom snippets
+require 'custom-snippets-setup'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
