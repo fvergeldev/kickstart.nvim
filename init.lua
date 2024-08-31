@@ -813,6 +813,11 @@ require('lazy').setup({
       'nvim-tree/nvim-web-devicons',
     },
   },
+  {
+    'chrisgrieser/nvim-early-retirement',
+    config = true,
+    event = 'VeryLazy',
+  },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
