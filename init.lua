@@ -920,6 +920,21 @@ require('lazy').setup({
     config = true,
     event = 'VeryLazy',
   },
+  {
+    'mistricky/codesnap.nvim',
+    build = 'make',
+    keys = {
+      { '<leader>cc', '<cmd>CodeSnap<cr>', mode = 'x', desc = 'Save selected code snapshot into clipboard' },
+      { '<leader>cs', '<cmd>CodeSnapSave<cr>', mode = 'x', desc = 'Save selected code snapshot in ~/CodeSnap' },
+    },
+    opts = {
+      save_path = '~/CodeSnap',
+      has_breadcrumbs = true,
+      has_line_number = true,
+      bg_theme = 'summer',
+      watermark = '',
+    },
+  },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
