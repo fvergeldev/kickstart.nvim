@@ -911,22 +911,6 @@ require('lazy').setup({
     },
   },
   {
-    'NeogitOrg/neogit',
-    dependencies = {
-      'nvim-lua/plenary.nvim', -- required
-      'sindrets/diffview.nvim', -- optional - Diff integration
-
-      -- Only one of these is needed.
-      'nvim-telescope/telescope.nvim', -- optional
-      'ibhagwan/fzf-lua', -- optional
-      'echasnovski/mini.pick', -- optional
-    },
-    keys = {
-      { '<leader>gg', ':Neogit<CR>', mode = 'n', desc = 'Open [N]eo[G]it' },
-      { '<leader>gc', ':Neogit commit<CR>', mode = 'n', desc = '[N]eoGit [C]ommit' },
-    },
-  },
-  {
     'folke/snacks.nvim',
     priority = 1000,
     lazy = false,
@@ -968,6 +952,15 @@ require('lazy').setup({
     { "<leader>fg", function() Snacks.picker.git_files() end, desc = "Find Git Files" },
     { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
     { "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
+    -- git
+    { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
+    { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
+    { "<leader>gL", function() Snacks.picker.git_log_line() end, desc = "Git Log Line" },
+    { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
+    { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" },
+    { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
+    { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
+    { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
     -- Grep
     { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
     { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
@@ -1094,9 +1087,6 @@ require 'custom-snippets-setup'
 
 -- Mini.nvim setup
 require 'mini-setup'
-
--- Neogit setup
-require 'neogit-setup'
 
 -- Snack setup
 require 'snack-setup'
